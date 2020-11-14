@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ExtMethod.ConsoleApp/1.0.0": {
+        "dependencies": {
+          "ExtHelper": "1.0.0"
+        },
+        "runtime": {
+          "ExtMethod.ConsoleApp.dll": {}
+        }
+      },
+      "ExtHelper/1.0.0": {
+        "runtime": {
+          "ExtHelper.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExtMethod.ConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

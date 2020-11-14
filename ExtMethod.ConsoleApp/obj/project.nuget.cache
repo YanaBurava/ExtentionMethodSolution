@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EWO46kvtm0426iJlpQtkJYs0BQLaJp2Loj6XDALictTltTFwjUv9KkviGJwSRHBXqbvoj63QHcSo2uDVveWVfA==",
+  "success": true,
+  "projectFilePath": "C:\\projects\\ExtentionMethodSolution\\ExtMethod.ConsoleApp\\ExtMethod.ConsoleApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yanin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

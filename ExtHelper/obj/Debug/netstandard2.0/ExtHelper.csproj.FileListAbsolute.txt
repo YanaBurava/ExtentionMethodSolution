@@ -1,0 +1,9 @@
+C:\projects\ExtentionMethodSolution\ExtHelper\bin\Debug\netstandard2.0\ExtHelper.deps.json
+C:\projects\ExtentionMethodSolution\ExtHelper\bin\Debug\netstandard2.0\ExtHelper.dll
+C:\projects\ExtentionMethodSolution\ExtHelper\bin\Debug\netstandard2.0\ExtHelper.pdb
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.csprojAssemblyReference.cache
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.AssemblyInfoInputs.cache
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.AssemblyInfo.cs
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.csproj.CoreCompileInputs.cache
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.dll
+C:\projects\ExtentionMethodSolution\ExtHelper\obj\Debug\netstandard2.0\ExtHelper.pdb

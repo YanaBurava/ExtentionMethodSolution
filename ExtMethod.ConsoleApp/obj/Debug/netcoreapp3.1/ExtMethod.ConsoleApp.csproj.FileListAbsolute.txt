@@ -1,0 +1,16 @@
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.exe
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.deps.json
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.runtimeconfig.json
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.runtimeconfig.dev.json
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.dll
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.pdb
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtHelper.dll
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\bin\Debug\netcoreapp3.1\ExtHelper.pdb
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.csprojAssemblyReference.cache
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.AssemblyInfoInputs.cache
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.AssemblyInfo.cs
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.csproj.CopyComplete
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.dll
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.pdb
+C:\projects\ExtentionMethodSolution\ExtMethod.ConsoleApp\obj\Debug\netcoreapp3.1\ExtMethod.ConsoleApp.genruntimeconfig.cache
