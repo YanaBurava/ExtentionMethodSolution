@@ -3,20 +3,18 @@
 namespace ExtHelper
 {
     /// <summary>
-    /// Класс ExtMeth, включает в себя 2 метода
+    /// Класс ExtMeth, включает в себя 2 метода расширения
     /// </summary>
     public static class ExtMeth
     {
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="position"></param>
-        /// <param name="size"></param>
-        /// <returns>е</returns>
+      
         public static bool GetBits(this int data, int position, int size)
         {
-            if (position < 0 || position > size)
+           
+            if (position < 0 || position >= size)
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -25,13 +23,16 @@ namespace ExtHelper
             return Convert.ToBoolean(bit);
         }
 
+        /// <summary>
+        /// Метод установки/сброса конкретных битов
+        /// </summary>
         public static int SetBits(this ref int data, int bit, int position, int size)
         {
-            if (position < 0 || position > size)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
+                if ( position < 0 || position >= size)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+          
             if (bit == 1)
             {
                 return data = data | 1 << position;
