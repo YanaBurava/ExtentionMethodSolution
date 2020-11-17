@@ -10,11 +10,27 @@ namespace ExtHelper
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
-      
-        public static bool GetBits(this int data, int position, int size)
+        public static bool GetBits(this byte data, int position)
         {
-           
-            if (position < 0 || position >= size)
+
+            if (position < 0 || position >= 7)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            int bit = (data >> position) & 1;
+            return Convert.ToBoolean(bit);
+        }
+
+       
+        /// <summary>
+        /// Метод определения конкретного бита
+        /// </summary>
+
+        public static bool GetBits(this int data, int position)
+        {
+
+            if (position < 0 || position >= 31)
             {
                 throw new ArgumentOutOfRangeException();
             }
@@ -26,22 +42,44 @@ namespace ExtHelper
         /// <summary>
         /// Метод установки/сброса конкретных битов
         /// </summary>
-        public static int SetBits(this ref int data, int bit, int position, int size)
+        public static byte SetBits(this ref byte data, int bit, int position)
         {
-                if ( position < 0 || position >= size)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-          
+            if (position < 0 || position >= 7)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
             if (bit == 1)
             {
-                return data = data | 1 << position;
+                return data = (byte)(data | (1 << position));
             }
             else
             {
-                return data = data & ~(1 << position);
+                return data = (byte)(data & ~(1 << position));
             }
 
         }
+        /// <summary>
+        /// Метод установки/сброса конкретных битов
+        /// </summary>
+        public static int SetBits(this ref int data, int bit, int position)
+        {
+            if (position < 0 || position >= 31)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            if (bit == 1)
+            {
+                return data |= (1 << position);
+            }
+            else
+            {
+                return data & ~(1 << position);
+            }
+
+        }
+
+       
     }
 }
