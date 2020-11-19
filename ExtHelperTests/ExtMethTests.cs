@@ -9,7 +9,7 @@ namespace ExtHelper.Tests
     [TestClass()]
     public class ExtMethTests
     {
-        #region int case
+        #region int 
         [TestMethod()]
         public void GetBitTest()
         {
@@ -56,11 +56,19 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest()
+        public void SetBit_1_Test()
         {
             int w = 0b11001010;
             int act = w.SetBit(1,11 );
             int exp = 0b0100011001010;
+
+            Assert.AreEqual(exp, act);
+        }
+        public void SetBit_0_Test()
+        {
+            int w = 0b11001010;
+            int act = w.SetBit(0, 1);
+            int exp = 0b11001000;
 
             Assert.AreEqual(exp, act);
         }
@@ -99,7 +107,7 @@ namespace ExtHelper.Tests
 
         #endregion
 
-        #region int case
+        #region uint 
         [TestMethod()]
         public void GetBitTest_uint()
         {
@@ -146,11 +154,20 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_uint()
+        public void SetBit_1_Test_uint()
         {
             uint w = 0b11001010;
             uint act = w.SetBit(1, 11);
             uint exp = 0b0100011001010;
+
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod()]
+        public void SetBit_0_Test_uint()
+        {
+            uint w = 0b11001010;
+            uint act = w.SetBit(0, 1);
+            uint exp = 0b11001000;
 
             Assert.AreEqual(exp, act);
         }
@@ -236,11 +253,20 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_byte()
+        public void SetBit_1_Test_byte()
         {
             byte w = 0b11001010;
             byte act = w.SetBit(1, 5);
             byte exp = 0b11101010;
+
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod()]
+        public void SetBit_0_Test_byte()
+        {
+            byte w = 0b11001010;
+            byte act = w.SetBit(0, 1);
+            byte exp = 0b11001000;
 
             Assert.AreEqual(exp, act);
         }
@@ -257,8 +283,8 @@ namespace ExtHelper.Tests
         public void SetBit7Test_byte()
         {
             byte w = 0b01001010;
-            int act = w.SetBit(1, 7);
-            int exp = 0b11001010;
+            byte act = w.SetBit(1, 7);
+            byte exp = 0b11001010;
 
             Assert.AreEqual(exp, act);
         }
@@ -275,6 +301,106 @@ namespace ExtHelper.Tests
         public void SetBit_PositioLessThan0_Exeption_Test_byte()
         {
             byte w = 0b11001010;
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => w.SetBit(1, -1));
+        }
+
+        #endregion
+
+        #region sbyte
+        [TestMethod()]
+        public void GetBitTest_sbyte()
+        {
+            sbyte w = 0b01001010;
+            bool expected = true;
+            bool actual = w.GetBit(3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void GetBit7Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            bool expected = false;
+            bool actual = w.GetBit(7);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void GetBit0Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            bool expected = false;
+            bool actual = w.GetBit(0);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod()]
+        public void GetBit_PositioGreaterThanSize_Exeption_Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => w.GetBit(8));
+
+        }
+
+        [TestMethod()]
+        public void GetBit_PositioLessThan0_Exeption_Test_sbyte()
+        {
+            sbyte w =-100;
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => w.GetBit(-1));
+        }
+
+        [TestMethod()]
+        public void SetBit_1_Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            sbyte act = w.SetBit(1, 5);
+            sbyte exp = 0b01101010;
+
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod()]
+        public void SetBit_0_Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            sbyte act = w.SetBit(0, 1);
+            sbyte exp = 0b01001000;
+
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod()]
+        public void SetBit0Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            sbyte act = w.SetBit(1, 0);
+            sbyte exp = 0b01001011;
+
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod()]
+        public void SetBit7Test_sbyte()
+        {
+            sbyte w = 0b1000;
+            sbyte act = w.SetBit(1, 7);
+            sbyte exp = -120;
+
+            Assert.AreEqual(exp, act);
+        }
+
+
+        [TestMethod()]
+        public void SetBit_PositionBiggerThanSize_Exeption_Test_sbyte()
+        {
+            sbyte w = 0b01001010;
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => w.SetBit(0, 8));
+        }
+
+        [TestMethod()]
+        public void SetBit_PositioLessThan0_Exeption_Test_sbyte()
+        {
+            sbyte w = 0b01001010;
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => w.SetBit(1, -1));
         }
 
@@ -325,11 +451,21 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_short()
+        public void SetBit_1_Test_short()
         {
             short w = 0b11001010;
             short act = w.SetBit(1, 5);
             short exp = 0b11101010;
+
+            Assert.AreEqual(exp, act);
+        }
+        
+        [TestMethod()]
+        public void SetBit_0_Test_short()
+        {
+            short w = 0b11001010;
+            short act = w.SetBit(0, 1);
+            short exp = 0b11001000;
 
             Assert.AreEqual(exp, act);
         }
@@ -345,9 +481,9 @@ namespace ExtHelper.Tests
         [TestMethod()]
         public void SetBit15Test_short()
         {
-            short w = 0b00001010;
-            short act = w.SetBit(1, 14);
-            short exp = 0b100000000001010;
+            short w = 0b0010;
+            short act = w.SetBit(1, 15);
+            short exp = -32766;
 
             Assert.AreEqual(exp, act);
         }
@@ -412,11 +548,21 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_ushort()
+        public void SetBit_1_Test_ushort()
         {
             ushort w = 0b11001010;
             ushort act = w.SetBit(1, 5);
             ushort exp = 0b11101010;
+
+            Assert.AreEqual(exp, act);
+        }
+
+        [TestMethod()]
+        public void SetBit_0_Test_ushort()
+        {
+            ushort w = 0b11001010;
+            ushort act = w.SetBit(0, 1);
+            ushort exp = 0b11001000;
 
             Assert.AreEqual(exp, act);
         }
@@ -501,7 +647,7 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_long()
+        public void SetBit_1_Test_long()
         {
             long w = 0b11001010;
             long act = w.SetBit(1, 5);
@@ -509,6 +655,17 @@ namespace ExtHelper.Tests
 
             Assert.AreEqual(exp, act);
         }
+
+        [TestMethod()]
+        public void SetBit_0_Test_long()
+        {
+            long w = 0b11001010;
+            long act = w.SetBit(0, 1);
+            long exp = 0b11001000;
+
+            Assert.AreEqual(exp, act);
+        }
+
         [TestMethod()]
         public void SetBit0Test_long()
         {
@@ -518,7 +675,6 @@ namespace ExtHelper.Tests
 
             Assert.AreEqual(exp, act);
         }
-
 
         [TestMethod()]
         public void SetBit_PositionBiggerThanSize_Exeption_Test_long()
@@ -584,7 +740,7 @@ namespace ExtHelper.Tests
         }
 
         [TestMethod()]
-        public void SetBitTest_ulong()
+        public void SetBit_1_Test_ulong()
         {
             ulong w = 0b11001010;
             ulong act = w.SetBit(1, 5);
@@ -592,7 +748,16 @@ namespace ExtHelper.Tests
 
             Assert.AreEqual(exp, act);
         }
-      
+
+        [TestMethod()]
+        public void SetBit_0_Test_ulong()
+        {
+            ulong w = 0b11001010;
+            ulong act = w.SetBit(0, 1);
+            ulong exp = 0b11001000;
+
+            Assert.AreEqual(exp, act);
+        }
         [TestMethod()]
         public void SetBit0Test_ulong()
         {

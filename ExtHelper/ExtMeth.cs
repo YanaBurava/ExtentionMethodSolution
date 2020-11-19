@@ -22,6 +22,22 @@ namespace ExtHelper
             int bit = (data >> position) & 1;
             return Convert.ToBoolean(bit);
         }
+
+        /// <summary>
+        /// Метод определения конкретного бита
+        /// </summary>
+        public static bool GetBit(this sbyte data, int position)
+        {
+
+            if (position < 0 || position > 7)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+
+            int bit = (data >> position) & 1;
+            return Convert.ToBoolean(bit);
+        }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -36,6 +52,7 @@ namespace ExtHelper
             int bit = (data >> position) & 1;
             return Convert.ToBoolean(bit);
         }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -50,6 +67,7 @@ namespace ExtHelper
             int bit = (data >> position) & 1;
             return Convert.ToBoolean(bit);
         }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -64,6 +82,7 @@ namespace ExtHelper
             int bit = (data >> position) & 1;
             return Convert.ToBoolean(bit);
         }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -78,6 +97,7 @@ namespace ExtHelper
             int bit = (int)((data >> position) & 1);
             return Convert.ToBoolean(bit);
         }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -92,6 +112,7 @@ namespace ExtHelper
             int bit =(int)((data >> position) & 1);
             return Convert.ToBoolean(bit);
         }
+
         /// <summary>
         /// Метод определения конкретного бита
         /// </summary>
@@ -127,24 +148,31 @@ namespace ExtHelper
             }
 
         }
+
+        /// <summary>
+        /// Метод установки/сброса конкретных битов
+        /// </summary>
         public static sbyte SetBit(this ref sbyte data, int bit, int position)
         {
             if (position < 0 || position > 7)
             {
                 throw new ArgumentOutOfRangeException();
             }
+                  
 
             if (bit == 1)
             {
-                return data = (sbyte)(data | (1 << position));
+                 return data = (sbyte)(data | (1 << position));
+             
             }
             else
             {
                 return data = (sbyte)(data & ~(1 << position));
             }
+            
 
         }
-
+       
         /// <summary>
         /// Метод установки/сброса конкретных битов
         /// </summary>
@@ -156,7 +184,7 @@ namespace ExtHelper
                 throw new ArgumentOutOfRangeException();
             }
 
-
+           
             if (bit == 1)
             {
                
@@ -168,6 +196,7 @@ namespace ExtHelper
             }
 
         }
+
         /// <summary>
         /// Метод установки/сброса конкретных битов
         /// </summary>
@@ -188,6 +217,7 @@ namespace ExtHelper
             }
 
         }
+
         /// <summary>
         /// Метод установки/сброса конкретных битов
         /// </summary>
@@ -208,6 +238,7 @@ namespace ExtHelper
             }
 
         }
+
         /// <summary>
         /// Метод установки/сброса конкретных битов
         /// </summary>
